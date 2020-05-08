@@ -1,0 +1,42 @@
+{
+    "name": "ideneal/io-bundle",
+    "description": "This bundle provides a way to serialize and deserialize inputs and outputs",
+    "keywords": [
+        "serializers",
+        "deserializers",
+        "inputs",
+        "outputs"
+    ],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [{
+        "name": "Daniele Pedone",
+        "email": "ideneal.ztl@gmail.com"
+    }],
+    "require": {
+        "php": ">=7.1.3",
+        "symfony/config": "^4.4|^5.0",
+        "symfony/framework-bundle": "^4.4|^5.0",
+        "symfony/dependency-injection": "^4.4|^5.0",
+        "symfony/http-kernel": "^4.4|^5.0",
+        "doctrine/annotations": "^1.0"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^4.3.5|^5.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Ideneal\\Bundle\\IOBundle\\": "src/"
+        },
+        "exclude-from-classmap": [
+            "/tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ideneal\\Bundle\\IOBundle\\Tests\\": "tests/",
+            "Tests\\Fixtures\\": "tests/Fixtures/"
+        }
+    }
+}
