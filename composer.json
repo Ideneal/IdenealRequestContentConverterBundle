@@ -19,7 +19,12 @@
         "symfony/framework-bundle": "^4.4|^5.0",
         "symfony/dependency-injection": "^4.4|^5.0",
         "symfony/http-kernel": "^4.4|^5.0",
-        "doctrine/annotations": "^1.0"
+        "doctrine/annotations": "^1.0",
+        "sensio/framework-extra-bundle": "^5.5",
+        "symfony/serializer-pack": "dev-master",
+        "symfony/validator": "^5.1@dev",
+        "symfony/orm-pack": "dev-master",
+        "symfony/expression-language": "^5.1@dev"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^4.3.5|^5.0"

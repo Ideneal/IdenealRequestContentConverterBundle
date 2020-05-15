@@ -1,0 +1,21 @@
+services:
+    
+    ideneal_io.converter.format_param_converter:
+        class: Ideneal\Bundle\IOBundle\Request\ParamConverter\FormatParamConverter
+        arguments:
+            - '@serializer'
+            - '@validator'
+        tags:
+            - { name: 'request.param_converter', converter: 'format' }
+    
+    ideneal_io.converter.format_doctrine_param_converter:
+        class: Ideneal\Bundle\IOBundle\Request\ParamConverter\FormatDoctrineParamConverter
+        arguments:
+            - '@serializer'
+            - '@validator'
+            - '@doctrine'
+            - '@sensio_framework_extra.converter.doctrine.orm.expression_language'
+        tags:
+            - { name: 'request.param_converter', converter: 'doctrine.orm', priority: 10 }
+    
+    
