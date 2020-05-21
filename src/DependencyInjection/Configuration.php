@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the ideneal/io-bundle library
+ * This file is part of the ideneal/request-content-converter-bundle library
  *
  * (c) Daniele Pedone <ideneal.ztl@gmail.com>
  *
@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ideneal\Bundle\IOBundle\DependencyInjection;
+namespace Ideneal\Bundle\RequestContentConverterBundle\DependencyInjection;
 
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -17,7 +17,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 /**
  * Class Configuration
  *
- * @package Ideneal\Bundle\IOBundle\DependencyInjection
+ * @package Ideneal\Bundle\RequestContentConverterBundle\DependencyInjection
  * @author  Daniele Pedone <ideneal.ztl@gmail.com>
  */
 class Configuration implements ConfigurationInterface
@@ -29,18 +29,18 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder('ideneal_io');
+        $treeBuilder = new TreeBuilder('ideneal_request_content_converter');
 
         if (method_exists($treeBuilder, 'getRootNode')) {
             $rootNode = $treeBuilder->getRootNode();
         } else {
             // BC layer for symfony/config 4.1 and older
-            $rootNode = $treeBuilder->root('ideneal_io');
+            $rootNode = $treeBuilder->root('ideneal_request_content_converter');
         }
 
         $rootNode
             ->children()
-                ->arrayNode('input')
+                ->arrayNode('converters')
                     ->addDefaultsIfNotSet()
                     ->children()
                         ->booleanNode('format_converters')->defaultTrue()->end()

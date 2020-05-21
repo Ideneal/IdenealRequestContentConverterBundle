@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the ideneal/io-bundle library
+ * This file is part of the ideneal/request-content-converter-bundle library
  *
  * (c) Daniele Pedone <ideneal.ztl@gmail.com>
  *
@@ -8,17 +8,17 @@
  * file that was distributed with this source code.
  */
 
-namespace Ideneal\Bundle\IOBundle\Configuration;
+namespace Ideneal\Bundle\RequestContentConverterBundle\Configuration;
 
 
 /**
- * Class EntityFormatParamConverter
+ * Class EntityContentParamConverter
  *
- * @package Ideneal\Bundle\IOBundle\Configuration
+ * @package Ideneal\Bundle\RequestContentConverterBundle\Configuration
  * @author  Daniele Pedone <ideneal.ztl@gmail.com>
  * @Annotation
  */
-class EntityFormatParamConverter extends FormatParamConverter
+class EntityContentParamConverter extends ContentParamConverter
 {
     /**
      * @param string $expr

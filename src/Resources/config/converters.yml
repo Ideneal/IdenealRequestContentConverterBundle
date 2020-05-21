@@ -1,7 +1,7 @@
 services:
     
     ideneal_io.converter.format_param_converter:
-        class: Ideneal\Bundle\IOBundle\Request\ParamConverter\FormatParamConverter
+        class: Ideneal\Bundle\RequestContentConverterBundle\Request\ParamConverter\ContentParamConverter
         arguments:
             - '@serializer'
             - '@validator'
@@ -9,7 +9,7 @@ services:
             - { name: 'request.param_converter', converter: 'format' }
     
     ideneal_io.converter.format_doctrine_param_converter:
-        class: Ideneal\Bundle\IOBundle\Request\ParamConverter\FormatDoctrineParamConverter
+        class: Ideneal\Bundle\RequestContentConverterBundle\Request\ParamConverter\ContentDoctrineParamConverter
         arguments:
             - '@serializer'
             - '@validator'

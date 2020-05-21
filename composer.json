@@ -1,11 +1,11 @@
 {
-    "name": "ideneal/io-bundle",
-    "description": "This bundle provides a way to serialize and deserialize inputs and outputs",
+    "name": "ideneal/request-content-converter-bundle",
+    "description": "This bundle provides a way to convert and validate the request content specifying a format",
     "keywords": [
-        "serializers",
-        "deserializers",
-        "inputs",
-        "outputs"
+        "request",
+        "content",
+        "deserialization",
+        "format"
     ],
     "type": "symfony-bundle",
     "license": "MIT",
@@ -27,12 +27,13 @@
         "symfony/expression-language": "^5.1@dev"
     },
     "require-dev": {
-        "symfony/phpunit-bridge": "^4.3.5|^5.0"
+        "symfony/phpunit-bridge": "^4.3.5|^5.0",
+        "phpunit/phpunit": "^7"
     },
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Ideneal\\Bundle\\IOBundle\\": "src/"
+            "Ideneal\\Bundle\\RequestContentConverterBundle\\": "src/"
         },
         "exclude-from-classmap": [
             "/tests/"
@@ -40,7 +41,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Ideneal\\Bundle\\IOBundle\\Tests\\": "tests/",
+            "Ideneal\\Bundle\\RequestContentConverterBundle\\Tests\\": "tests/",
             "Tests\\Fixtures\\": "tests/Fixtures/"
         }
     }

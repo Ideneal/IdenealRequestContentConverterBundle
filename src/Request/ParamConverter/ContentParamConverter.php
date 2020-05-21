@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the ideneal/io-bundle library
+ * This file is part of the ideneal/request-content-converter-bundle library
  *
  * (c) Daniele Pedone <ideneal.ztl@gmail.com>
  *
@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ideneal\Bundle\IOBundle\Request\ParamConverter;
+namespace Ideneal\Bundle\RequestContentConverterBundle\Request\ParamConverter;
 
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
@@ -19,12 +19,12 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 
 /**
- * Class FormatParamConverter
+ * Class ContentParamConverter
  *
- * @package Ideneal\Bundle\IOBundle\Request\ParamConverter
+ * @package Ideneal\Bundle\RequestContentConverterBundle\Request\ParamConverter
  * @author  Daniele Pedone <ideneal.ztl@gmail.com>
  */
-class FormatParamConverter implements ParamConverterInterface
+class ContentParamConverter implements ParamConverterInterface
 {
     use ParamConverterValidationTrait;
 

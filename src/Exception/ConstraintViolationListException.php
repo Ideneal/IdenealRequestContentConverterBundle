@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the ideneal/io-bundle library
+ * This file is part of the ideneal/request-content-converter-bundle library
  *
  * (c) Daniele Pedone <ideneal.ztl@gmail.com>
  *
@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ideneal\Bundle\IOBundle\Exception;
+namespace Ideneal\Bundle\RequestContentConverterBundle\Exception;
 
 
 use Symfony\Component\HttpKernel\Exception\HttpException;
@@ -17,7 +17,7 @@ use Symfony\Component\Validator\ConstraintViolationListInterface;
 /**
  * Class ConstraintViolationListException
  *
- * @package Ideneal\Bundle\IOBundle\Exception
+ * @package Ideneal\Bundle\RequestContentConverterBundle\Exception
  * @author  Daniele Pedone <ideneal.ztl@gmail.com>
  */
 class ConstraintViolationListException extends HttpException
@@ -37,7 +37,7 @@ class ConstraintViolationListException extends HttpException
      * @param array                            $headers
      * @param int|null                         $code
      */
-    public function __construct(ConstraintViolationListInterface $constraintViolationList, string $message = null, int $statusCode = 400, \Throwable $previous = null, array $headers = [], ?int $code = 0)
+    public function __construct(ConstraintViolationListInterface $constraintViolationList, string $message = 'Validation failed.', int $statusCode = 400, \Throwable $previous = null, array $headers = [], ?int $code = 0)
     {
         parent::__construct($statusCode, $message, $previous, $headers, $code);
         $this->constraintViolationList = $constraintViolationList;

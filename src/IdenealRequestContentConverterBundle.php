@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the ideneal/io-bundle library
+ * This file is part of the ideneal/request-content-converter-bundle library
  *
  * (c) Daniele Pedone <ideneal.ztl@gmail.com>
  *
@@ -8,17 +8,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Ideneal\Bundle\IOBundle;
+namespace Ideneal\Bundle\RequestContentConverterBundle;
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * Class IdenealIOBundle
+ * Class IdenealRequestContentConverterBundle
  *
- * @package Ideneal\Bundle\IOBundle
+ * @package Ideneal\Bundle\RequestContentConverterBundle
  * @author  Daniele Pedone <ideneal.ztl@gmail.com>
  */
-class IdenealIOBundle extends Bundle 
+class IdenealRequestContentConverterBundle extends Bundle
 {
 }

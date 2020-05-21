@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the ideneal/io-bundle library
+ * This file is part of the ideneal/request-content-converter-bundle library
  *
  * (c) Daniele Pedone <ideneal.ztl@gmail.com>
  *
@@ -8,16 +8,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Ideneal\Bundle\IOBundle\Request\ParamConverter;
+namespace Ideneal\Bundle\RequestContentConverterBundle\Request\ParamConverter;
 
 
-use Ideneal\Bundle\IOBundle\Exception\ConstraintViolationListException;
+use Ideneal\Bundle\RequestContentConverterBundle\Exception\ConstraintViolationListException;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
  * Trait ParamConverterValidationTrait
  *
- * @package Ideneal\Bundle\IOBundle\Request\ParamConverter
+ * @package Ideneal\Bundle\RequestContentConverterBundle\Request\ParamConverter
  * @author  Daniele Pedone <ideneal.ztl@gmail.com>
  */
 trait ParamConverterValidationTrait
@@ -43,10 +43,10 @@ trait ParamConverterValidationTrait
         }
 
         $validationGroups = isset($options['validation_groups']) ? $options['validation_groups'] : null;
-        $errors           = $this->validator->validate($object, null, $validationGroups);
+        $violationList    = $this->validator->validate($object, null, $validationGroups);
 
-        if (count($errors) > 0) {
-            throw new ConstraintViolationListException($errors);
+        if (count($violationList) > 0) {
+            throw new ConstraintViolationListException($violationList);
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the ideneal/io-bundle library
+ * This file is part of the ideneal/request-content-converter-bundle library
  *
  * (c) Daniele Pedone <ideneal.ztl@gmail.com>
  *
@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Ideneal\Bundle\IOBundle\DependencyInjection;
+namespace Ideneal\Bundle\RequestContentConverterBundle\DependencyInjection;
 
 
 use Symfony\Component\Config\FileLocator;
@@ -17,12 +17,12 @@ use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 /**
- * Class IdenealIOExtension
+ * Class IdenealRequestContentConverterExtension
  *
- * @package Ideneal\Bundle\IOBundle\DependencyInjection
+ * @package Ideneal\Bundle\RequestContentConverterBundle\DependencyInjection
  * @author  Daniele Pedone <ideneal.ztl@gmail.com>
  */
-class IdenealIOExtension extends Extension
+class IdenealRequestContentConverterExtension extends Extension
 {
     /**
      * @param array            $configs
@@ -37,7 +37,7 @@ class IdenealIOExtension extends Extension
 
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
 
-        if ($config['input']['format_converters']) {
+        if ($config['converters']['format_converters']) {
             $loader->load('converters.yml');
         }
     }
