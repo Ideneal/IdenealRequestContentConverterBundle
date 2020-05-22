@@ -1,12 +1,7 @@
 {
     "name": "ideneal/request-content-converter-bundle",
     "description": "This bundle provides a way to convert and validate the request content specifying a format",
-    "keywords": [
-        "request",
-        "content",
-        "deserialization",
-        "format"
-    ],
+    "keywords": ["request", "content", "deserialization", "format"],
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [{
@@ -21,10 +16,10 @@
         "symfony/http-kernel": "^4.4|^5.0",
         "doctrine/annotations": "^1.0",
         "sensio/framework-extra-bundle": "^5.5",
-        "symfony/serializer-pack": "dev-master",
-        "symfony/validator": "^5.1@dev",
-        "symfony/orm-pack": "dev-master",
-        "symfony/expression-language": "^5.1@dev"
+        "symfony/serializer-pack": "*",
+        "symfony/orm-pack": "*",
+        "symfony/validator": "*",
+        "symfony/expression-language": "*"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^4.3.5|^5.0",
