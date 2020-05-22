@@ -12,11 +12,10 @@ namespace Ideneal\Bundle\RequestContentConverterBundle\Tests\Request\ParamConver
 
 
 use Ideneal\Bundle\RequestContentConverterBundle\Request\ParamConverter\ContentParamConverter;
-use Ideneal\Bundle\RequestContentConverterBundle\Tests\Configuration\ConfigurationTestCase;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Validator\Validator\RecursiveValidator;
 
-class ContentParamConverterTest extends ConfigurationTestCase
+class ContentParamConverterTest
 {
     /**
      * @var Serializer
@@ -33,7 +32,7 @@ class ContentParamConverterTest extends ConfigurationTestCase
      */
     private $converter;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->serializer = $this->getMockBuilder('Symfony\Component\Serializer\Serializer')->getMock();
         $this->validator  = $this->getMockBuilder('Symfony\Component\Validator\Validator\RecursiveValidator')
@@ -41,6 +40,47 @@ class ContentParamConverterTest extends ConfigurationTestCase
                                  ->getMock()
         ;
         $this->converter  = new ContentParamConverter($this->serializer, $this->validator);
+    }
+
+    /**
+     * @param null       $class
+     * @param array|null $options
+     * @param string     $name
+     * @param bool       $isOptional
+     *
+     * @return MockObject
+     */
+    public function createConfiguration($class = null, array $options = null, $name = 'arg', $isOptional = false)
+    {
+        $methods = ['getClass', 'getAliasName', 'getOptions', 'getName', 'allowArray'];
+        if (null !== $isOptional) {
+            $methods[] = 'isOptional';
+        }
+        $config = $this
+            ->getMockBuilder('Ideneal\Bundle\RequestContentConverterBundle\Configuration\ContentParamConverter')
+            ->setMethods($methods)
+            ->disableOriginalConstructor()
+            ->getMock();
+        if (null !== $options) {
+            $config->expects($this->once())
+                   ->method('getOptions')
+                   ->willReturn($options);
+        }
+        if (null !== $class) {
+            $config->expects($this->any())
+                   ->method('getClass')
+                   ->willReturn($class);
+        }
+        $config->expects($this->any())
+               ->method('getName')
+               ->willReturn($name);
+        if (null !== $isOptional) {
+            $config->expects($this->any())
+                   ->method('isOptional')
+                   ->willReturn($isOptional);
+        }
+
+        return $config;
     }
 
     public function testSupports()
