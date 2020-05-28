@@ -41,6 +41,8 @@ matrix:
         - env: STABILITY="dev"
 
 before_install:
+    - INI_FILE=~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+    - echo memory_limit = -1 >> $INI_FILE 
     - if [[ $COVERAGE != true ]]; then phpenv config-rm xdebug.ini || true; fi
     - if ! [ -z "$STABILITY" ]; then composer config minimum-stability ${STABILITY}; fi;
 
