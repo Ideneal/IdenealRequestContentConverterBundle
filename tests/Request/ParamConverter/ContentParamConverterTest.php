@@ -12,10 +12,11 @@ namespace Ideneal\Bundle\RequestContentConverterBundle\Tests\Request\ParamConver
 
 
 use Ideneal\Bundle\RequestContentConverterBundle\Request\ParamConverter\ContentParamConverter;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Validator\Validator\RecursiveValidator;
 
-class ContentParamConverterTest
+class ContentParamConverterTest extends TestCase
 {
     /**
      * @var Serializer
