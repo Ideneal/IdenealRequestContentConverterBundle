@@ -1,4 +1,9 @@
-# RequestContentConverterBundle
+# IdenealRequestContentConverterBundle
+
+[![Packagist](https://img.shields.io/packagist/v/ideneal/request-content-converter-bundle.svg?style=flat-square)](https://packagist.org/packages/ideneal/request-content-converter-bundle)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/Ideneal/IdenealRequestContentConverterBundle/master/LICENSE)
+[![Travis branch](https://img.shields.io/travis/Ideneal/IdenealRequestContentConverterBundle/master.svg?style=flat-square)](https://travis-ci.org/Ideneal/IdenealRequestContentConverterBundle)
+[![Codacy branch](https://img.shields.io/codacy/fd2aeec49ab54ba4960ad04352ee2ce2/master.svg?style=flat-square)](https://www.codacy.com/app/ideneal-ztl/IdenealRequestContentConverterBundle)
 
 This is a Symfony bundle that extends the features of [SensioFrameworkExtraBundle](https://github.com/sensiolabs/SensioFrameworkExtraBundle).
 It provides a way to  deserialize and validate the request content into a specified class or entity.
