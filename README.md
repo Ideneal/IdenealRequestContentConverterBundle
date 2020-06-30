@@ -1,5 +1,6 @@
 # IdenealRequestContentConverterBundle
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a154de2ecabd48d888d1d127f11a7531)](https://app.codacy.com/manual/ideneal-ztl/IdenealRequestContentConverterBundle?utm_source=github.com&utm_medium=referral&utm_content=Ideneal/IdenealRequestContentConverterBundle&utm_campaign=Badge_Grade_Dashboard)
 [![Packagist](https://img.shields.io/packagist/php-v/ideneal/request-content-converter-bundle.svg?style=flat-square)](https://packagist.org/packages/ideneal/request-content-converter-bundle)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/Ideneal/IdenealRequestContentConverterBundle/master/LICENSE)
 [![Travis branch](https://img.shields.io/travis/Ideneal/IdenealRequestContentConverterBundle/master.svg?style=flat-square)](https://travis-ci.org/Ideneal/IdenealRequestContentConverterBundle)
