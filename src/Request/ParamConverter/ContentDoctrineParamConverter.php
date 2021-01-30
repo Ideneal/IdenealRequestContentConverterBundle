@@ -11,7 +11,7 @@
 namespace Ideneal\Bundle\RequestContentConverterBundle\Request\ParamConverter;
 
 
-use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\Persistence\ManagerRegistry;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DoctrineParamConverter;
 use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
